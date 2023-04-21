@@ -1,0 +1,9 @@
+
+<div class="product-container">
+    <div class="product-button-container">
+        <app-button text="Add Product" [func]="AddProduct.bind(this)" type="raised" [style]="buttonstyle"></app-button>
+    </div>
+    <div class="product-table-container">
+        <app-table [tablename]="tableName" [TableData]="productData"></app-table>
+    </div>
+</div>

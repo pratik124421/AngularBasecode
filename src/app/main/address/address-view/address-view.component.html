@@ -1,0 +1,28 @@
+<mat-card class="example-card">
+    <div class="card-tag">
+        Default
+    </div>
+
+    <div class="address-info">
+        <label>{{AddInfo.Country}}</label>
+        <span>{{AddInfo.Pincode}}</span>
+        <span>{{AddInfo.House_no}}</span>
+        <span>{{AddInfo.Area}}</span>
+        <span>{{AddInfo.Landmark}}</span>
+        <span>{{AddInfo.City}}</span>
+        <span>{{AddInfo.State}}</span>
+    </div>
+
+    <div class="operation">
+        <span (click)="EditAddress(AddInfo.Id)"><a>Edit</a></span>
+        <span>|</span>
+        <span><a>Remove</a></span>
+    </div>
+
+    <div class="order-detail">
+
+    </div>
+
+</mat-card>
+
+

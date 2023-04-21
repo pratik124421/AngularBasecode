@@ -1,0 +1,15 @@
+.tag{
+    width: 100px;
+    background-color: red;
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-size: 15px;
+    transform: rotate(-45deg);
+    padding: 5px;
+    letter-spacing: 2px;
+    position: relative;
+    left: -5rem;
+    top: -1.5rem;
+
+}

@@ -1,0 +1,10 @@
+
+<div class="maindialog">
+<div class="close" (click)="closeDialog()">
+    <mat-icon class="close-icon">close</mat-icon>
+</div>
+<div class="form-title">
+    <div class="line"><span class="title">PRODUCT FORM</span></div>
+</div>
+<app-reactive-form [FormName]="FormName"  (Submit)="onsubmit($event)"></app-reactive-form>
+</div>

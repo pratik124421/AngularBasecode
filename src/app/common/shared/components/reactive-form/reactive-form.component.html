@@ -1,0 +1,135 @@
+
+<form (ngSubmit)="onSubmit()" [formGroup]="Form">
+
+    <ng-container *ngFor="let form of FormData['Inputs']">
+
+        <ng-container [ngSwitch]="form.InputType">
+
+            <ng-container *ngSwitchCase= "'DragFile'">
+                <!-- <div class="dropzone" dragdrop (fileDropped)="onFileDropped($event)"> -->
+                <div class="dropzone">
+                    <input type="file" #fileDropRef id="fileDropRef" multiple (change)="fileBrowseHandler($event.target.files)" accept="image/*">
+                    <img src="../../../../../assets/images/dragdrop.jpg" alt="">
+                    <h3>Drag and drop file here</h3>
+                    <h3>or</h3>
+                    <label for="fileDropRef">Browse for file</label>
+                </div>
+
+                <div class="fileinfo">
+                    <div class="file" *ngFor="let file of Form.get(form.InputName).value;let ind=index">
+                        <div class="left">
+                            <label>{{file.file.name}}</label>
+                        </div>
+                        <div class="right" (click)="removefile(file.id)">
+                            <mat-icon>close</mat-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </ng-container>
+
+            <ng-container *ngSwitchCase= "'Text'">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{form.Label}}</mat-label>
+                    <input matInput [formControlName]="form.InputName">
+
+                    <mat-error *ngIf="Form.get(form.InputName).hasError('required')">
+                        {{form.Errormsg.required}}
+                    </mat-error>
+                    <!-- <ng-container *ngTemplateOutlet="errorMessage;context:{Form,form}"></ng-container> -->
+
+                </mat-form-field>
+            </ng-container>
+
+            <ng-container *ngSwitchCase= "'Number'">
+                <mat-form-field appearance="outline">
+                    <mat-label>{{form.Label}}</mat-label>
+                    <input matInput type="number" [formControlName]="form.InputName" min="0">
+
+                    <mat-error *ngIf="Form.get(form.InputName).hasError('required')">
+                        {{form.Errormsg.required}}
+                    </mat-error>
+                    <!-- <ng-container *ngTemplateOutlet="errorMessage;context:{Form,form}"></ng-container> -->
+
+                </mat-form-field>
+            </ng-container>
+
+
+            <ng-container *ngSwitchCase= "'Password'">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>{{form.Label}}</mat-label>
+                    <input matInput [type]="hidePassword ? 'password' : 'text'" [formControlName]="form.InputName">
+                    <button mat-icon-button matSuffix (click)="hidePassword = !hidePassword">
+                    <mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+
+
+                    <mat-error *ngIf="Form.get(form.InputName).hasError('required')">
+                        {{form.Errormsg.required}}
+                    </mat-error>
+
+                    <mat-error *ngIf="Form.get(form.InputName).hasError('minlength')">
+                        {{form.Errormsg.minlength}}
+                    </mat-error>
+
+                </mat-form-field>
+
+            </ng-container>
+
+            <ng-container *ngSwitchCase= "'Select'">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>{{form.Label}}</mat-label>
+                    <mat-select [formControlName]="form.InputName">
+                    <mat-option *ngFor="let option of form.Options" [value]="option.Value">{{option.Key}}</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+            </ng-container>
+
+
+            <ng-container *ngSwitchCase= "'Textarea'">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Textarea</mat-label>
+                    <textarea matInput></textarea>
+                </mat-form-field>
+
+            </ng-container>
+
+            <ng-container *ngSwitchDefault>
+                <h3>No data Found</h3>
+            </ng-container>
+        </ng-container>
+
+    </ng-container>
+
+
+    <div class="button-group">
+        <ng-container *ngFor="let form of FormData['Buttons']">
+
+            <ng-container [ngSwitch]="form['ButtonName']">
+
+                <ng-container *ngSwitchCase="'Submit'">
+                    <button [disabled]="!Form.valid" mat-flat-button color="primary" type="submit" [ngStyle]="calculateWidth( FormData['Buttons'])">{{form.Label}}</button>
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'Reset'">
+                    <button mat-flat-button color="primary" type="reset" [ngStyle]="calculateWidth( FormData['Buttons'])">{{form.Label}}</button>
+                </ng-container>
+
+            </ng-container>
+
+        </ng-container>
+    </div>
+</form>
+
+<!-- <ng-template #errorMessage let-Form="Form" let-form="form">
+
+    <mat-error *ngIf="Form.get(form.InputName).hasError('required')">
+        {{form.Errormsg.required}}
+    </mat-error>
+
+</ng-template> -->
+

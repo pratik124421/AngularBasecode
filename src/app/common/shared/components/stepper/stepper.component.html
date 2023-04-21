@@ -1,0 +1,16 @@
+
+<div class="stepper-container">
+
+    <ng-container *ngFor="let item of StepList;let ind=index">
+        <div style="flex:1">
+            <button mat-stroked-button (click)="handleState(ind)" StepController [StateList]="StepList" [ActiveState]="StepList.indexOf(currentState)" [Controller]="ind" >
+                {{item}}
+                <mat-icon class="matIcon" *ngIf="ind<StepList.indexOf(currentState) || StepList.indexOf(currentState) == StepList.length-1">check_circle</mat-icon>
+            </button>
+        </div>
+        <hr *ngIf="ind<StepList.length-1" style="flex:3">
+    </ng-container>
+
+</div>
+
+

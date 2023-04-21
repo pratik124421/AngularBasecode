@@ -1,0 +1,17 @@
+.box-container {
+    max-width: 400px;
+  }
+
+.card-header{
+    padding: 10px;
+}
+
+.title{
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.card-content{
+    display: flex;
+    justify-content: center;
+}

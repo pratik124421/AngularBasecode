@@ -1,0 +1,16 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.router-link-active{
+  background-color: white;
+  color:  #3f51b5;
+}
+
+.navbar{
+  background-color: #3c406a;;
+  color: white;
+  border-radius: 0px;
+  width: 100vw;
+  height: 80px;
+}

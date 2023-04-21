@@ -1,0 +1,25 @@
+
+
+.maindialog .title{
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+
+}
+
+.maindialog .line{
+    padding: 10px;
+}
+
+
+.maindialog{
+    position: relative;
+}
+.close{
+    position: absolute;
+    top:-1.5rem;
+    right:-1rem;
+}
+.close-icon{
+    font-size: 3rem;
+}

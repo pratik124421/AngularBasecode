@@ -1,0 +1,54 @@
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="sliderOpen">
+        <h1 class="sidebar-title">Dashboard</h1>
+
+        <mat-list role="list">
+
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Location
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-list-item role="listitem"><a [routerLink]="['location']">View Location</a></mat-list-item>
+                      <mat-list-item role="listitem"><a href="#">Add Location</a></mat-list-item>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            Products
+                        </mat-panel-title>
+                      </mat-expansion-panel-header>
+                      <mat-list-item role="listitem"><a href="#">View Products</a></mat-list-item>
+                      <mat-list-item role="listitem"><a href="#">Add Products</a></mat-list-item>
+                </mat-expansion-panel>
+
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Orders
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-list-item role="listitem"><a href="#">View Orders</a></mat-list-item>
+                  <mat-list-item role="listitem"><a href="#">Add Orders</a></mat-list-item>
+            </mat-expansion-panel>
+
+            </mat-accordion>
+
+
+          </mat-list>
+        </mat-drawer>
+
+    <div class="example-sidenav-content">
+      <!-- <button type="button" mat-button (click)="drawer.toggle()">
+        Toggle sidenav
+      </button> -->
+
+      <ng-content></ng-content>
+
+
+    </div>
+
+  </mat-drawer-container>

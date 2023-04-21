@@ -1,0 +1,101 @@
+
+.sub-div{
+    display: flex;
+    justify-content:flex-start;
+}
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-container{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+
+.info-container .title h3{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.info .desc{
+    letter-spacing: 1px;
+    font-size: small;
+}
+
+.delivery-instruction{
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-instruction{
+    margin-top: 20px;
+}
+
+.extra-instruction input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+}
+
+.extra-instruction .instruction{
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.extra-instruction{
+    margin-top: 10px;
+}
+
+.currency{
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: gray;
+
+}
+
+.main-div{
+    position: relative;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.close{
+    position: absolute;
+    top:-1.5rem;
+    right:-1rem;
+    z-index: 1;
+}
+.close-icon{
+    font-size: 3rem;
+}
+
+
+
+
+@media only screen and (max-width: 800px) {
+    .sub-div{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+    }
+    .info-container{
+        padding-top: 10px;
+        padding-left: 0px;
+    }
+
+    .pricing-instruction{
+        padding-bottom: 10px;
+    }
+
+
+  }
+
+
+

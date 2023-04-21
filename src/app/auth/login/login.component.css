@@ -1,0 +1,40 @@
+
+.container{
+    max-width: fit-content;
+    text-align: center;
+}
+
+.line {
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+  }
+  .line:after {
+    content: "";
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: auto;
+    z-index: -1;
+  }
+
+  .form-title{
+    margin-top: 20px;
+  }
+
+  .line .content {
+    padding: 0 8px;
+    background-color: #fafafa;
+    position: relative;
+  }
+  .line .title {
+    padding: 0 8px;
+    background-color: #fafafa;
+    position: relative;
+    font-size: 25px;
+    color:  #3f51b5;
+    font-weight: bolder;
+  }
+

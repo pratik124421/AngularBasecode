@@ -1,0 +1,112 @@
+
+
+.cart-title{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: gray;
+}
+.example-icon{
+    background-color: transparent;
+    margin-left: auto;
+    border: none;
+    color: gray;
+    transition: all;
+
+}
+
+.example-icon:hover{
+    transition:.2s all;
+    transform: scale(.8);
+}
+
+.dialog-header{
+    border-bottom: 1px solid gray;
+    display: flex;
+    align-items: center;
+}
+
+.cart-dialog-info{
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.dialog-content{
+    display: flex;
+    gap:1rem;
+    margin-top:1rem;
+}
+
+img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.image{
+    /* background-color: aqua; */
+    width: fit-content;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+.button-div{
+    display: flex;
+    align-items: center;
+    gap:3rem
+}
+.counter-div{
+    display: flex;
+    border: 1px solid gray;
+    width: 8rem;
+    padding: 1rem;
+}
+.counter-div>input{
+    background-color: transparent;
+    border: none;
+    overflow: hidden;
+    padding: 0 0.5rem;
+}
+.counter-div>span{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.counter-div>input:focus{
+    border: none;
+    outline: none;
+}
+.button-div>:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    cursor: pointer;
+}
+.button-div>:nth-child(2)>span{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1rem;
+}
+.line-div{
+    border: 1px solid rgb(59, 59, 59);
+    width: 100%;
+    transition: all 500ms;
+
+}
+.button-div>:nth-child(2):hover .line-div{
+    transform: translateX(-100px);
+}
+
+.footer-detail{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-detail label:first-child{
+    letter-spacing: 5px;
+}
+
+input{
+    text-align: center;
+}

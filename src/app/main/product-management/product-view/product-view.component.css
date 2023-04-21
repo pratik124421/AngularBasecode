@@ -1,0 +1,16 @@
+.product-button-container{
+    margin-top: 10px;
+    width: 250px;
+}
+
+.product-table-container{
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .product-button-container{
+        width: 150px;
+    }
+  }
+
+

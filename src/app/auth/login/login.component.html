@@ -1,0 +1,17 @@
+<div class="container">
+
+    <div class="form-title">
+        <div class="line"><span class="title">Login</span></div>
+    </div>
+    <app-reactive-form [FormName]="FormName"  (Submit)="onsubmit($event)"></app-reactive-form>
+
+
+    <div class="line"><span class="content">New to site</span></div>
+
+    <a [routerLink]="Register_path">
+        <app-button type="stroke" func="$event.preventDefault" text="Click Here"></app-button>
+    </a>
+
+</div>
+
+

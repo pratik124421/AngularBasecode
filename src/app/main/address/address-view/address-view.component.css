@@ -1,0 +1,62 @@
+.example-card{
+    width: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgb(165, 162, 162);
+    padding: 20px;
+    position: relative;
+    margin-right: 2rem
+}
+
+.card-tag{
+    background-color: #3c406a;;
+    width: fit-content;
+    padding: 5px 10px;
+    color: white;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+}
+
+label{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.address-info{
+    height: 180px;
+}
+
+.address-info span{
+    display: block;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.operation{
+    margin-top: 20px;
+    padding: 10px 0px 0px 0px;
+}
+
+.operation span{
+    margin-right: 10px;
+}
+
+
+.operation span a:hover{
+    cursor: pointer;
+    color: red;
+}
+
+@media only screen and (max-width: 450px) {
+    .example-card{
+        width: auto;
+    }
+
+    .address-info{
+        height: auto;
+    }
+}

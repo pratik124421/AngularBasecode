@@ -1,0 +1,57 @@
+<div class="cart">
+    <div class="dialog-header">
+
+        <label class="cart-title">CART</label>
+
+        <button class="example-icon">
+        <mat-icon (click)="onCloseDialog()">close</mat-icon>
+        </button>
+    </div>
+
+    <ng-container *ngIf="product.length>0;else emptycart">
+    <div class="cart-dialog-info">
+    <ng-container  *ngFor="let val of product">
+    <div class="dialog-content">
+        <div class="image">
+            <img [src]="val.image">
+        </div>
+        <div class="info">
+          <div>
+               <h3>{{val.title}}</h3>
+               <p>{{val.description}}</p>
+          </div>
+
+          <div>
+            <label>{{val.totalPrice | currency:INR}}</label>
+           <div class="button-div">
+            <div class="counter-div">
+                <span (click)="DecrementQuantity(val)">-</span>
+                <input type="text" [(ngModel)]="val.quantity" disabled/>
+                <span (click)="IncrementQuantity(val)">+</span>
+            </div>
+            <div>
+                <span>Remove</span>
+                <div class="line-div"></div>
+            </div>
+           </div>
+           </div>
+
+        </div>
+    </div>
+    </ng-container>
+    </div>
+
+    <div class="dialog-footer">
+        <div class="footer-detail">
+            <label>TOTAL</label>
+            <label>{{20000 | currency:INR}}</label>
+        </div>
+        <app-button type="stroke" [func]="checkout" text="Checkout"></app-button>
+    </div>
+    </ng-container>
+
+    <ng-template #emptycart>
+        <label>YOUR CART IS EMPTY</label>
+    </ng-template>
+
+</div>

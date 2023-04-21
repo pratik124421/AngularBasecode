@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;overflow: hidden; }
+
+.toster-success{
+    color: green;
+    background: white
+}
+
+.toster-error{
+    color: red;
+    background: white;
+    /* background : rgba(92, 76, 175, 0.5) */
+}
+/* .toster-error button{
+    color: red;
+} */
+
+.toster-info{
+    color: blue;
+    background: white
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(200, 200, 200);
+}
+::-webkit-scrollbar{
+    width: 3px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(153, 153, 153);
+}
+
+
+.dialog-responsive{
+    overflow: scroll;
+}
+
+@media only screen and (max-width: 800px) and (min-width:600px) {
+    .dialog-responsive {
+        width: 60%;
+        height: 90%;
+    }
+}

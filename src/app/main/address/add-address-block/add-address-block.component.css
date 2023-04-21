@@ -1,0 +1,34 @@
+.example-card{
+    width: 300px;
+    margin-bottom: 50px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px dashed rgb(165, 162, 162);
+    padding: 20px;
+    margin-right: 2rem;
+    padding: 45px;
+}
+
+.address-info{
+    width: auto;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 5rem;
+    height: 5rem;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .example-card{
+        width: auto;
+    }
+
+    .address-info{
+        height: auto;
+    }
+}

@@ -1,0 +1,59 @@
+<div class="main-div">
+    <ng-content></ng-content>
+    <div *ngIf="!ordered" class="close" (click)="closeDialog()">
+        <mat-icon class="close-icon">close</mat-icon>
+    </div>
+    <div class="sub-div">
+        <div class="img-container">
+            <img src="https://www.shutterstock.com/image-photo/fresh-fruits-assorted-colorful-backgroundvitamins-260nw-252338818.jpg">
+        </div>
+
+        <div class="info-container">
+            <div class="title">
+                <h3>BRICK BROWN STRIPPED SINGLE PEICE SUIT</h3>
+            </div>
+            <div class="info">
+                <p class="desc">
+                    You have to return this product in mentioned time please keep this thing in your mind.
+                </p>
+
+                <div class="delivery-instruction" *ngIf="!ordered">
+                    <span>
+                        <b>Delivery Time</b>
+                    </span>
+                    <span>- 3 TO 7 working days</span>
+
+                    <div class="extra-instruction">
+                        <input type="checkbox" [(ngModel)]="checkvalue">
+                        <span class="instruction">Add Fast Delivery for just {{5000 | currency:"INR"}}</span>
+                    </div>
+                </div>
+
+                <div class="pricing-instruction">
+                    <span class="currency">{{20000+ (checkvalue ? 10000:0) | currency:"INR"}}/-</span>
+                </div>
+
+                <div style="margin-top: 5px;"  *ngIf="ordered">
+                    <span>
+                        <b>Total Quantity</b>
+                    </span>
+                    <span> 10</span>
+                </div>
+
+                <hr>
+                <div  *ngIf="ordered">
+                    <span>
+                        <b>Total Price</b>
+                    </span>
+                    <span> 10000</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <app-button *ngIf="!ordered" type="stroke" [func]="addproducttocart.bind(this)" text="ADD TO CART" [style]="buttonstyle"></app-button>
+
+</div>

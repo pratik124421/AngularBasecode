@@ -1,0 +1,170 @@
+.example-card{
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgb(165, 162, 162);
+    padding: 20px;
+    position: relative;
+    margin-right: 2rem
+}
+
+/* .example-card{
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 1px solid rgb(165, 162, 162);
+    margin-top: 5px;
+} */
+
+.example-card:hover{
+    cursor: pointer;
+    background-color: rgb(251, 251, 251);
+}
+
+.sub-card{
+    display: flex;
+}
+
+.info-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .image-container{
+    width: 200px;
+    height: 200px;
+
+} */
+
+.info-container{
+    width: 100%;
+    height: auto;
+    margin-left: 10px;
+}
+
+img{
+    max-width: 200px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.left-panel span{
+    font-size: 18px;
+    font-weight: 500;
+    font-size: medium;
+    color: gray;
+
+}
+
+.right-panel{
+    width: 150px;
+    text-align: right
+}
+
+.price-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .example-card{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .right-panel:first-child{
+        text-align: left;
+    }
+
+    .right-panel:nth-child(2){
+        text-align: right;
+    }
+
+    .left-panel span{
+        font-size: 15px;
+        font-weight: 500;
+        color: gray;
+
+    }
+
+    .right-panel span{
+        font-size: 12px;
+    }
+
+    div button{
+        width: fit-content;
+        height: 25px;
+        font-size: small;
+
+    }
+
+    .matIcon{
+        font-size: 20px;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 650px) {
+
+    .left-panel span{
+        font-size: 12px;
+        font-weight: 500;
+        color: gray;
+    }
+
+    .right-panel span{
+        font-size: 10px;
+    }
+    div button{
+        width: fit-content;
+        height: 20px;
+        font-size: small;
+
+    }
+
+    .matIcon{
+        font-size: 20px;
+    }
+
+  }
+
+
+  @media only screen and (max-width: 350px) {
+
+    .sub-card{
+        flex-direction: column;
+    }
+
+    .price-info{
+        flex-direction: column;
+    }
+
+    .right-panel:nth-child(2){
+        text-align: left;
+    }
+
+    .info-container{
+        margin-left: 0;
+    }
+
+
+
+    button{
+        text-align: left;
+    }
+
+  }

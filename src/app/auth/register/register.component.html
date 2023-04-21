@@ -1,0 +1,11 @@
+<div class="container">
+
+    <div class="form-title">
+        <div class="line"><span class="title">Register</span></div>
+    </div>
+
+    <app-reactive-form [FormName]="FormName" (Submit)="onsubmit($event)"></app-reactive-form>
+
+    <p style="margin-top: 5px;">Already have an account? <a [routerLink]="Login_Path">Sign in</a></p>
+</div>
+

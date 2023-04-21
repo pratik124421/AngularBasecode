@@ -1,0 +1,92 @@
+<div class="profile-page">
+    <div class="profile-info">
+
+        <div class="info">
+            <div class="profile-title">
+                <span class="title">Prajapati Pratik</span>
+            </div>
+            <div class="reset-block">
+                <button>Reset Password</button>
+            </div>
+        </div>
+
+        <!-- <div class="menu-icon">
+            <mat-icon style="color: white;" class="menu">menu</mat-icon>
+        </div> -->
+
+    </div>
+
+    <div class="profile-content">
+
+        <div class="menu-icon" menuslider>
+            <mat-icon style="color: black;" class="menu">menu</mat-icon>
+        </div>
+
+        <div class="menu-container">
+
+            <div class="menu-block">
+                <div class="menu-item" (click)="fetchProfile()" [class.active]="ActiveLink == 'Profile'">
+                    Profile
+                </div>
+
+                <div class="menu-item" (click)="fetchOrders()" [class.active]="ActiveLink == 'Order'">
+                    Orders
+                </div>
+
+                <div class="menu-item" (click)="fetchAddress()" [class.active]="ActiveLink == 'Address'">
+                    Address
+                </div>
+            </div>
+
+        </div>
+
+        <div class="main-block">
+
+            <div class="content-title">
+                <span>{{ActiveLink}}</span>
+            </div>
+            <div class="content" [class.raw-oriented]="ActiveLink == 'Address'">
+
+                <ng-container  [ngSwitch]="ActiveLink">
+
+                    <ng-container *ngSwitchCase="'Profile'">
+
+                    </ng-container>
+
+
+                    <ng-container *ngSwitchCase="'Order'">
+
+                        <app-order-history></app-order-history>
+                        <app-order-history></app-order-history>
+                        <app-order-history></app-order-history>
+                        <app-order-history></app-order-history>
+                        <app-order-history></app-order-history>
+                        <app-order-history></app-order-history>
+
+                    </ng-container>
+
+
+                    <ng-container *ngSwitchCase="'Address'">
+
+                        <ng-container *ngIf="addressList.length<3" class="add-block">
+                            <app-add-address-block></app-add-address-block>
+                        </ng-container>
+
+                        <ng-ontainer *ngFor="let item of addressList" class="add-block">
+                            <app-address-view [addInfo]="item"></app-address-view>
+                        </ng-ontainer>
+
+
+
+                    </ng-container>
+
+                </ng-container>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
